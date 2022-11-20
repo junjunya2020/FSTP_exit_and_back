@@ -1,0 +1,16 @@
+//列表页面加载数据字典值
+//由于多数据时加载列表数据慢，暂已弃用2017-9-16
+function getDictVal(dictitemval,dictCode){
+var desc="";
+	$.ajax({
+	    type:'GET',
+	    url:"dict/loaddictitem?val="+dictitemval+"&code="+dictCode,
+	    async:false,
+	    success:function(result)
+		{
+	    	var result = eval('(' + result + ')');
+			desc=result.description;
+	    }
+	});
+	return desc;
+}

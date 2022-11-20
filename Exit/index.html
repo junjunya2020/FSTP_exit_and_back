@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)http://zscx.fspt.net:9030/iss/wechataudit/check?code=gsTaFphvhAk0xtK8xbBaXoo2K1_pKGCxassCJD24vGg&state= -->
+<html data-arp-injected="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>学生离校审批结果查询</title>
+	    
+<meta http-equiv="X-UA-Compatible" content="edge">
+<link rel="shortcut icon" href="http://zscx.fspt.net:9030/iss/static/images/favicon.ico">
+<script type="text/javascript" src="./学生离校审批结果查询_files/jquery.min.js.下载" charset="utf-8"></script>
+<link id="bootstrapCss" rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/bootstrap.min.css">
+<link id="bootstrapTheme" rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/bootstrap-theme.min.css">
+<script type="text/javascript" src="./学生离校审批结果查询_files/bootstrap.min.js.下载"></script>
+
+<link id="datetimepickerCss" rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/bootstrap-datetimepicker.min.css">
+<script type="text/javascript" src="./学生离校审批结果查询_files/moment-with-locales.min.js.下载"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/bootstrap-datetimepicker.min.js.下载"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/extJs.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/customer.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/WdatePicker.js.下载" charset="utf-8"></script><link href="./学生离校审批结果查询_files/WdatePicker.css" rel="stylesheet" type="text/css">
+<link id="easyuiTheme" rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/easyui.css">
+<link id="easyuiTheme" rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/icon.css">
+<script type="text/javascript" src="./学生离校审批结果查询_files/jquery.easyui.min.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/easyui-lang-zh_CN.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./学生离校审批结果查询_files/echarts.min.js.下载" charset="utf-8"></script>
+
+<link rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/dreamlu.css">
+<link rel="stylesheet" type="text/css" href="./学生离校审批结果查询_files/foundation-icons.css">
+<script type="text/javascript">
+    var basePath = "/iss";
+    window.UEDITOR_HOME_URL = "/iss/static/ueditor/";
+    window.UEDITOR_SERVER_URL = "/iss/ueditor";
+</script><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <style>
+	    	.result{
+	    		border:1px solid #ccc;
+	    		border-radius:5px;
+	    		margin:0 auto;
+	    		width:95%;
+	    		height:200px;
+	    		font-size:36px;
+				text-align:center;
+				line-height:100px;
+				color:white;
+	    	}
+	    	.green{
+	    		background-color:green;
+	    	}
+	    	.red{
+	    		background-color:green;
+	    	}
+	    	.yellow{
+	    		color:#000;
+	    		background-color:green;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="time" style="width:100%;text-align:center;font-size:32px;font-weight:bold;">2022-10-20 16:39:06</div>
+		<div class="container-fluid">
+			<div class="result red">审批已通过</div>
+			</div>
+		<div id="no" style="width:100%;text-align:center;font-size:24px;font-weight:bold;"></div>
+		<div id="xm" style="width:100%;text-align:center;font-size:24px;font-weight:bold;"></div>
+		
+		
+		<script type="text/javascript">
+			var name;
+			var no;
+		
+
+			
+			
+function getQueryString(name) {
+  const url_string = window.location.href
+  const url = new URL(url_string);
+  return url.searchParams.get(name);
+}
+var name = getQueryString('name');
+var no = getQueryString('no');
+			
+console.log(getQueryString('name')) // mick
+console.log(getQueryString('no')) // 20			
+			
+			
+			
+			
+			
+			
+			
+		function settime(){
+                var date = new Date();//获得当前时间
+                var yy = date.getFullYear();//年份
+                var mm = date.getMonth() + 1;//获得月份
+                mm = (mm < 10 ? "0" + mm : mm);//月份小于10时，前面加个0(例如9 ->09)天，小时，分钟，秒同理
+                var dd = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());//天
+                var hours = (date.getHours() < 10 ? "0" + date.getHours() : date.getHours());//小时
+                var minutes = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());//分钟
+                var seconds = (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds());//秒
+                document.getElementById("time").innerHTML = yy + '-' + mm + "-" + dd + " " + hours + ':' + minutes + ':' + seconds;
+				document.getElementById("no").innerHTML ='学生学号：'+no;
+				document.getElementById("xm").innerHTML ='学生姓名 ：'+name;
+            }
+            window.onload=function(){
+                settime();
+                setInterval("settime()", 1000);
+                
+            }
+		</script>
+	
+</body><div mx-name="tarrot-translation"></div></html>

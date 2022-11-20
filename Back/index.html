@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://smallwhite666.github.io/back/ -->
+<html data-arp-injected="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>入校登记</title>
+<script src="./入校登记_files/fakeme.umd.min.js.下载"></script>
+<link rel="stylesheet" href="./入校登记_files/bootstrap.min.css">
+<style>
+	.content{
+			width:90%;
+		}
+	.jobnum{
+		     font-size: 3rem;
+		     
+		 }
+</style>
+</head>
+<body style="background-image:url(static/bg16.jpg);">
+<div class="container-fluid content">
+	<br><br>
+	<div class="alert alert-success">
+		<strong style="font-size: 2rem;">已成功登记入校</strong>
+	</div>
+	<div id="time" style="background:#FFF;width:100%;text-align:center;font-size:32px;font-weight:bold;">2022-11-02 22:17:40</div>
+	<br>
+	<ul class="list-group">
+		<li class="list-group-item" style="font-weight: bold;font-size: 2rem;color:#C71585;">学生信息：</li>
+		<li id="no" class="list-group-item">&nbsp;</li>
+		<li id="name" class="list-group-item">&nbsp;</li>
+		<li id="class" class="list-group-item">&nbsp;</li>
+	</ul>
+</div>
+	<script type="text/javascript">
+		
+		
+		function getQueryString(name) {
+			const url_string = window.location.href
+			const url = new URL(url_string);
+			return url.searchParams.get(name);
+									}		
+		var name = getQueryString('name');
+		var no = getQueryString('no');
+		var clas = getQueryString('class');
+		
+		
+		
+		
+		function settime(){
+		              var date = new Date();//获得当前时间
+		              var yy = date.getFullYear();//年份
+		              var mm = date.getMonth() + 1;//获得月份
+		              mm = (mm < 10 ? "0" + mm : mm);//月份小于10时，前面加个0(例如9 ->09)天，小时，分钟，秒同理
+		              var dd = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());//天
+		              var hours = (date.getHours() < 10 ? "0" + date.getHours() : date.getHours());//小时
+		              var minutes = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());//分钟
+		              var seconds = (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds());//秒
+		              document.getElementById("time").innerHTML = yy + '-' + mm + "-" + dd + " " + hours + ':' + minutes + ':' + seconds;
+						document.getElementById("name").innerHTML ="&nbsp;姓名："+name;
+						document.getElementById("no").innerHTML ="&nbsp;学号："+no;
+						document.getElementById("class").innerHTML ="&nbsp;班级："+clas;
+		          }
+		          
+    settime();
+    setInterval("settime()", 1000);
+	</script>
+
+	
+
+</body><div mx-name="tarrot-translation"></div></html>
